@@ -37,7 +37,7 @@ async def commands(ctx):
     items = [
         "!commands for a list of commands",
         "!shop for a link to the Elder Vault website"
-        "!tracker for a link to the Elder Vault Collection Tracker"
+        "!tracker for a link to the Elder Vault Collection Tracker",
         "!setcollection <amount> to set the total number of figures in your collection",
         "!collection to view your collection progress"
     ]
