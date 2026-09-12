@@ -36,7 +36,8 @@ async def on_ready():
 async def commands(ctx):
     items = [
         "!commands for a list of commands",
-        "!TEV for a link to the Elder Vault website"
+        "!shop for a link to the Elder Vault website"
+        "!tracker for a link to the Elder Vault Collection Tracker"
         "!setcollection <amount> to set the total number of figures in your collection",
         "!collection to view your collection progress"
     ]
@@ -46,7 +47,11 @@ async def commands(ctx):
     await ctx.send(f"Here is a list of commands you can use:\n\n{command_list}")
 
 @bot.command()
-async def TEV(ctx):
+async def tracker(ctx):
+    ctx.send("https://theeldervault.com/pages/collection-tracker")
+
+@bot.command()
+async def shop(ctx):
     await ctx.send("https://theeldervault.com/")
 
 @bot.command()
@@ -76,8 +81,10 @@ async def collection(ctx):
     user_id = str(ctx.author.id)
 
     if user_id not in collections:
-        await ctx.send("You haven't set your collection yet!"
-                       "Use '!setcollection <amount>' first.")
+        await ctx.send("You haven't set your collection yet!\n"
+                       "Use '!setcollection <amount>' first.\n"
+                       "For example: !setcollection 100"
+                       )
         return
 
     owned = collections[user_id]
