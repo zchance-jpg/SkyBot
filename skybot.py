@@ -48,7 +48,7 @@ async def commands(ctx):
 
 @bot.command()
 async def tracker(ctx):
-    ctx.send("https://theeldervault.com/pages/collection-tracker")
+    await ctx.send("https://theeldervault.com/pages/collection-tracker")
 
 @bot.command()
 async def shop(ctx):
